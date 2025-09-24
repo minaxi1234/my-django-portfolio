@@ -1,0 +1,21 @@
+
+    {% extends "home/base.html" %}
+    {% block title%}About page{% endblock %}
+    {% block content %}
+    <div class="caard">
+     <div class="card-body">
+        <h1 class="card-title">About me</h1>
+        <p class="card-text">Name: {{name}}</p>
+        <p class="card-text">Course: {{course}}</p>
+        <p class="card-text">Bio: {{bio}}</p>
+        <hr class="list-group">
+        <h2>Skills:</h2>
+        <ul class="list-group">
+            {% for skill in skills %}
+            <li class="list-group-item">{{skill}}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    {% endblock %}
+

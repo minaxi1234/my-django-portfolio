@@ -1,0 +1,24 @@
+{% extends "home/base.html" %}
+
+{% block title %} All messgaes {% endblock %}
+
+{% block content %}
+<h1>All Contact Messages</h1>
+
+{% if messages %}
+<div class="list-group">
+  {% for message in messages %}
+  <div class="list-group-item">
+    <strong>{{ message.name }}</strong> ({{ message.email }}) <br>
+    {{ message.message }} <br>
+    <em class="text-muted">{{ message.created_at }}</em>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">
+  No messages yet.
+</div>
+
+{% endif %}
+{% endblock %}
